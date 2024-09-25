@@ -11,7 +11,28 @@ mysql = MySQL(app)
 
 @app.route('/')
 def home():
-    return 'Bem-vindo à aplicação Flask!'
+    return '''
+    <html>
+        <head>
+            <style>
+                .caixa {
+                    border: 2px solid #4CAF50;
+                    padding: 20px;
+                    margin: 20px;
+                    text-align: center;
+                    font-family: Arial, sans-serif;
+                    background-color: #f9f9f9;
+                    box-shadow: 2px 2px 12px #aaa;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="caixa">
+                <h1>Bem-vindo à aplicação Flask!</h1>
+            </div>
+        </body>
+    </html>
+    '''
 
 @app.route('/atualizar_dados')
 def atualizar_dados():
