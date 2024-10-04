@@ -1,7 +1,9 @@
+-- Usar o banco de dados
 USE banco_de_dados;
 
-CREATE TABLE usuarios (
-    uid INT,
+-- Criar a tabela usuarios
+CREATE TABLE IF NOT EXISTS usuarios (
+    uid INT PRIMARY KEY,
     gid INT,
     grupos VARCHAR(255)
 );
